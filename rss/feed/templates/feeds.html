@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2> News feed</h2>
+<ul>
+    {% for feed in feed_list %}
+    <li>
+        <h5>            
+            Title: 
+            {{feed.title}}<br>
+            Date:
+            {{feed.created_at}}
+            <br>
+            Desription:
+            {{feed.desc}} <br>
+            <a href="{{ feed.link }}" target="_blank">{{ feed.link }} </a>              
+            
+        </h5> 
+        
+    </li>
+    {% endfor %} 
+</ul>
+{% endblock %}
